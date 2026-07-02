@@ -35,10 +35,26 @@ cp nodes.conf.example nodes.conf
 
 - `victoria-metrics-linux-amd64-v1.135.0-cluster.tar.gz`
 - `vmutils-linux-amd64-v1.135.0.tar.gz`
+- `vmutils-linux-amd64-v1.144.0.tar.gz`
 - `victoria-metrics.tar.gz`
 - `vmctl-prod`
 
 如需使用其他版本，需要同步调整脚本中的文件名和版本假设。
+
+## Release 离线包
+
+为了让使用者一趟下载完整部署材料，可以先在本地生成离线包，再上传到 GitHub Release：
+
+```bash
+./scripts/package_release.sh v1.135.0-deploy.1
+```
+
+生成结果位于 `dist/`：
+
+- `victoriametrics-deploy-offline-v1.135.0-deploy.1.tar.gz`
+- `victoriametrics-deploy-offline-v1.135.0-deploy.1.tar.gz.sha256`
+
+离线包包含仓库中已跟踪的脚本、配置模板、`cfg/` 配置，以及根目录下的 VictoriaMetrics/vmutils tar 包和 `vmctl-prod`。真实 `cluster.conf`、`nodes.conf`、`.cluster-secrets` 不会被打入离线包。
 
 ## 本地检查
 

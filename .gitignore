@@ -15,6 +15,7 @@ vm*-prod
 
 # 运行期数据、日志和临时目录
 data/
+dist/
 logs/
 tmp/
 *.log
