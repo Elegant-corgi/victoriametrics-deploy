@@ -1,11 +1,13 @@
-# VictoriaMetrics 隔离集群配置（由 Bash source 读取，仅填写可信内容）
+# VictoriaMetrics 集群部署配置模板。
+# 复制为 cluster.conf 后按真实环境修改；cluster.conf 包含生产地址，默认不提交到 Git。
+
 APP_DIR=/data/apps/victoriametrics
 REMOTE_CONFIG_DIR=/etc/victoriametrics-cluster
 SERVICE_USER=victoriametrics-cluster
 TENANT_ID=0
 RETENTION_PERIOD=1y
 DEDUP_INTERVAL=5s
-ALERTMANAGER_URL=http://10.27.3.68:9093
+ALERTMANAGER_URL=http://<alertmanager-ip>:9093
 
 VMSTORAGE_INSERT_PORT=18400
 VMSTORAGE_SELECT_PORT=18401

@@ -1,0 +1,9 @@
+# 每行格式：IP roles=逗号分隔的角色
+# 当前部署脚本要求恰好 3 个节点：
+# - 3 个节点都部署 vmstorage
+# - 至少 2 个节点部署 vminsert、vmselect
+# - 恰好 2 个节点部署 vmagent、vmalert、vmauth
+
+<node-1-ip> roles=vmstorage,vminsert,vmselect,vmagent,vmalert,vmauth
+<node-2-ip> roles=vmstorage,vminsert,vmselect,vmagent,vmalert,vmauth
+<node-3-ip> roles=vmstorage,vminsert,vmselect

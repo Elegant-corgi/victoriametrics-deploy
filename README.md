@@ -7,14 +7,29 @@ VictoriaMetrics 单机和三节点集群部署脚本，以及配套的采集、�
 ```text
 .
 ├── cfg/                         # vmagent 抓取配置、file_sd 配置和 vmalert 规则
-├── cluster.conf                 # 集群部署参数
-├── nodes.conf                   # 集群节点和角色清单
+├── cluster.conf.example         # 集群部署参数模板
+├── nodes.conf.example           # 集群节点和角色清单模板
 ├── deploy_vm_cluster.sh         # 三节点 VictoriaMetrics Cluster 部署/检查/同步脚本
 ├── deploy_vm_single_node.sh     # 单机部署脚本
-└── import_vm.sh                 # Prometheus 历史数据导入脚本
+├── import_vm.sh                 # Prometheus 历史数据导入脚本
+└── scripts/check.sh             # 本地静态检查入口
 ```
 
-## 本地制品
+## 初始化配置
+
+真实 `cluster.conf` 和 `nodes.conf` 包含生产节点、端口和告警地址，默认不提交到 Git。首次使用时从模板复制：
+
+```bash
+cp cluster.conf.example cluster.conf
+cp nodes.conf.example nodes.conf
+```
+
+然后按环境修改：
+
+- `cluster.conf`：安装目录、远端配置目录、租户 ID、保留周期、去重间隔、Alertmanager 地址和端口。
+- `nodes.conf`：三台节点 IP，以及每台节点承担的 `vmstorage`、`vminsert`、`vmselect`、`vmagent`、`vmalert`、`vmauth` 角色。
+
+## 制品准备
 
 以下文件体积较大或属于可再获取的二进制制品，默认不提交到 Git。运行部署前需要放在项目根目录：
 
@@ -24,6 +39,21 @@ VictoriaMetrics 单机和三节点集群部署脚本，以及配套的采集、�
 - `vmctl-prod`
 
 如需使用其他版本，需要同步调整脚本中的文件名和版本假设。
+
+## 本地检查
+
+执行统一检查入口：
+
+```bash
+./scripts/check.sh
+```
+
+该脚本会执行：
+
+- `bash -n deploy_vm_cluster.sh`
+- `bash -n deploy_vm_single_node.sh`
+- `bash -n import_vm.sh`
+- 如果本机安装了 `shellcheck`，继续执行 shellcheck；否则仅提示跳过。
 
 ## 集群部署
 
@@ -75,16 +105,9 @@ VictoriaMetrics 单机和三节点集群部署脚本，以及配套的采集、�
 
 该命令会先校验生成后的 vmagent/vmalert 配置，再同步到 vmagent 和 vmalert 节点。
 
-## 安全注意事项
+## 敏感信息说明
 
-- `.cluster-secrets`、`*.env`、`secrets/` 等凭据文件已加入 `.gitignore`，不要提交真实密码、令牌或生产凭据。
-- `nodes.conf`、`cluster.conf` 和 `cfg/` 中可能包含内网 IP、告警地址和业务目标，推送到公开仓库前请确认可公开范围。
+- `cluster.conf`、`nodes.conf`、`.cluster-secrets`、`*.env`、`secrets/` 等本地配置和凭据文件已加入 `.gitignore`，不要提交真实密码、令牌或生产凭据。
+- `cfg/` 中仍可能包含内网 IP、机柜位置、业务目标等生产信息。推送到公开仓库前，请确认这些监控目标允许公开。
+- `import_vm.sh` 当前硬编码了 Prometheus 数据路径和 VictoriaMetrics 写入地址，执行前必须按环境确认或修改。
 - 部署脚本会通过 SSH 连接目标节点，并写入 `/etc/systemd/system/`、应用目录和数据目录，请在测试环境验证后再用于生产。
-
-## 建议的本地检查
-
-```bash
-bash -n deploy_vm_cluster.sh
-bash -n deploy_vm_single_node.sh
-bash -n import_vm.sh
-```

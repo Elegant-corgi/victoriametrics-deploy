@@ -1,4 +1,6 @@
-# 本地密钥和凭据
+# 本地部署配置、密钥和凭据
+cluster.conf
+nodes.conf
 .cluster-secrets
 *.env
 *.secret
