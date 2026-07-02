@@ -1,0 +1,7 @@
+- targets:
+ #- 10.101.25.1:9835
+  labels:
+    app: gpu_exporter
+    job: gpu
+    device_type: A100
+    data_center_id: 70c429cc-0897-4f81-965a-f7415a09080f

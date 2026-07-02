@@ -1,0 +1,242 @@
+groups:
+- name: BMC-日志事件关闭
+  interval: 60s
+  rules:
+  - alert: ff4e4c3d146d59ffa47ed5c28317305c
+    expr: ipmi_sensor_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",type="Event
+      Logging Disabled"} > 0
+    for: 300s
+    labels:
+      alert_template: BMC-日志事件关闭
+      alert_template_id: 12f304e4-bd94-4980-b68a-4274b1ae3fb3
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",type="Event
+        Logging Disabled"} > 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec.
+        Check cycle: 60s'
+      summary: Alert ff4e4c3d146d59ffa47ed5c28317305c in BMC-日志事件关闭 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-温度异常
+  interval: 60s
+  rules:
+  - alert: 52136f95c952c68466338bbe1a2c607e
+    expr: ipmi_temperature_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+      > 0
+    for: 0s
+    labels:
+      alert_template: BMC-温度异常
+      alert_template_id: 878d18d9-5fcd-46a0-b945-f56fdedde115
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_temperature_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+        > 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert 52136f95c952c68466338bbe1a2c607e in BMC-温度异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-电源异常
+  interval: 60s
+  rules:
+  - alert: b53026e60af96fe0847ffae04d4bd14f
+    expr: ipmi_chassis_power_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+      > 2
+    for: 0s
+    labels:
+      alert_template: BMC-电源异常
+      alert_template_id: 7ea42739-0f20-4d0e-915a-58319ee53b8a
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_chassis_power_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+        > 2 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert b53026e60af96fe0847ffae04d4bd14f in BMC-电源异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-通用硬件状态异常
+  interval: 30s
+  rules:
+  - alert: 5f575fec09295b7dbb66bdf8ff60fb79
+    expr: ipmi_sensor_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",type!~"Entity
+      Presence|System Event|System Firmware Progress|Memory|Processor|Event Logging
+      Disabled"} > 0
+    for: 300s
+    labels:
+      alert_template: BMC-通用硬件状态异常
+      alert_template_id: 24213a4b-8071-41bd-8e92-ecf16f234ebf
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",type!~"Entity
+        Presence|System Event|System Firmware Progress|Memory|Processor|Event Logging
+        Disabled"} > 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check
+        cycle: 30s'
+      summary: Alert 5f575fec09295b7dbb66bdf8ff60fb79 in BMC-通用硬件状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-风扇异常
+  interval: 60s
+  rules:
+  - alert: 9051120a79e6cea6a415cf90d282dd92
+    expr: (avg_over_time(ipmi_fan_speed_rpm{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[3m])
+      < 1000) and on (instance, device) (count_over_time((ipmi_fan_speed_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+      > 0)[1h:15s]) >= 1)
+    for: 0s
+    labels:
+      alert_template: BMC-风扇异常
+      alert_template_id: 1d7d9490-268a-46ce-8333-38d5bc4f2df1
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: (avg_over_time(ipmi_fan_speed_rpm{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[3m])
+        < 1000) and on (instance, device) (count_over_time((ipmi_fan_speed_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+        > 0)[1h:15s]) >= 1) in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check
+        cycle: 60s'
+      summary: Alert 9051120a79e6cea6a415cf90d282dd92 in BMC-风扇异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-电压异常
+  interval: 60s
+  rules:
+  - alert: 70ef353749eef376dc6cb455313b8603
+    expr: ipmi_voltage_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+      > 0
+    for: 120s
+    labels:
+      alert_template: BMC-电压异常
+      alert_template_id: e680ad4f-5b94-40ba-b8db-98f349569820
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_voltage_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}
+        > 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert 70ef353749eef376dc6cb455313b8603 in BMC-电压异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-内存类状态异常
+  interval: 60s
+  rules:
+  - alert: c4e37c68b6470f4c76791ee1cf3d1321
+    expr: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Memory"}
+      > 0
+    for: 120s
+    labels:
+      alert_template: BMC-内存类状态异常
+      alert_template_id: 283f2e7e-ed49-4c20-96f3-e38a07eeecfe
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Memory"}
+        > 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert c4e37c68b6470f4c76791ee1cf3d1321 in BMC-内存类状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-处理器类状态异常
+  interval: 60s
+  rules:
+  - alert: 5ea2d18b2a443ac8b3c0d972231ffd61
+    expr: ipmi_sensor_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",type="Processor"}
+      > 0
+    for: 60s
+    labels:
+      alert_template: BMC-处理器类状态异常
+      alert_template_id: 4341b0f6-dff5-45c7-adee-665c956d1307
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",type="Processor"}
+        > 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert 5ea2d18b2a443ac8b3c0d972231ffd61 in BMC-处理器类状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: ping丢包告警
+  interval: 30s
+  rules:
+  - alert: 04ede759922d90424cf525a7757a326b
+    expr: (max_over_time(((100 * clamp_min(1 - (increase(smokeping_response_duration_seconds_count{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m])
+      / clamp_min(increase(smokeping_requests_total{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m]),
+      1)), 0)) > bool 2)[3d:5m]) > 0) unless (min_over_time(((100 * clamp_min(1 -
+      (increase(smokeping_response_duration_seconds_count{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m])
+      / clamp_min(increase(smokeping_requests_total{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m]),
+      1)), 0)) > bool 2)[3d:5m]) > 0)
+    for: 0s
+    labels:
+      alert_template: ping丢包告警
+      alert_template_id: 7c65c85f-2698-4ac8-8156-6790c643d8b4
+      info: 20分钟丢包率超过2%
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: (max_over_time(((100 * clamp_min(1
+        - (increase(smokeping_response_duration_seconds_count{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m])
+        / clamp_min(increase(smokeping_requests_total{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m]),
+        1)), 0)) > bool 2)[3d:5m]) > 0) unless (min_over_time(((100 * clamp_min(1
+        - (increase(smokeping_response_duration_seconds_count{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m])
+        / clamp_min(increase(smokeping_requests_total{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[20m]),
+        1)), 0)) > bool 2)[3d:5m]) > 0) in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec.
+        Check cycle: 30s'
+      summary: Alert 04ede759922d90424cf525a7757a326b in ping丢包告警 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 半小时抖动超10次
+  interval: 60s
+  rules:
+  - alert: c0a75cba58f6f0ae2cd37cc4cdf4d05f
+    expr: increase(ruijieIfUpDownTimes{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[30m])
+      > 10
+    for: 0s
+    labels:
+      alert_template: 半小时抖动超10次
+      alert_template_id: fc7353b7-11c5-4b15-865e-6ece4979ce4e
+      severity: 严重
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: increase(ruijieIfUpDownTimes{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[30m])
+        > 10 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert c0a75cba58f6f0ae2cd37cc4cdf4d05f in 半小时抖动超10次 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 网口DOWN
+  interval: 60s
+  rules:
+  - alert: ea5e0b664c5b6b4a2a0e22b8019c02f1
+    expr: (min_over_time(ifOperStatus{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[2m])
+      > 1.5) and (min_over_time(ifOperStatus{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[2d])
+      < 1.5)
+    for: 0s
+    labels:
+      alert_template: 网口DOWN
+      alert_template_id: 61563762-f0ed-4b96-89a0-379482042b2d
+      info: 网口DOWN超过2分钟
+      severity: 主要
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: (min_over_time(ifOperStatus{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[2m])
+        > 1.5) and (min_over_time(ifOperStatus{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec"}[2d])
+        < 1.5) in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert ea5e0b664c5b6b4a2a0e22b8019c02f1 in 网口DOWN template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: SNMP数据获取失败
+  interval: 60s
+  rules:
+  - alert: 5b29b179fcd4a2c536d3b77656716b21
+    expr: avg_over_time(up{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",job=~"snmp.*"}[5m])
+      == 0
+    for: 0s
+    labels:
+      alert_template: SNMP数据获取失败
+      alert_template_id: bcb47940-22df-47ae-8c6b-0a58033e1a37
+      info: 超过5分钟未获取到数据
+      severity: 严重
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: avg_over_time(up{data_center_id="59baf96d-21a3-4b94-af9b-aab0a88f6bec",job=~"snmp.*"}[5m])
+        == 0 in data center 59baf96d-21a3-4b94-af9b-aab0a88f6bec. Check cycle: 60s'
+      summary: Alert 5b29b179fcd4a2c536d3b77656716b21 in SNMP数据获取失败 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'

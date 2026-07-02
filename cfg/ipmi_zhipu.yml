@@ -1,0 +1,1323 @@
+- targets:
+  - 10.1.3.65
+  labels:
+    host_name: "APT-01"
+    ipmi_target: "10.1.3.65"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.66
+  labels:
+    host_name: "PXE-01"
+    ipmi_target: "10.1.3.66"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.67
+  labels:
+    host_name: "PXE-02"
+    ipmi_target: "10.1.3.67"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.68
+  labels:
+    host_name: "MGTJK-01"
+    ipmi_target: "10.1.3.68"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.69
+  labels:
+    host_name: "MGTJK-02"
+    ipmi_target: "10.1.3.69"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.70
+  labels:
+    host_name: "MGTJK-03"
+    ipmi_target: "10.1.3.70"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.71
+  labels:
+    host_name: "SLJK-01"
+    ipmi_target: "10.1.3.71"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.72
+  labels:
+    host_name: "SLJK-02"
+    ipmi_target: "10.1.3.72"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.73
+  labels:
+    host_name: "SLJK-03"
+    ipmi_target: "10.1.3.73"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.74
+  labels:
+    host_name: "ZP跳板机01"
+    ipmi_target: "10.1.3.74"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.75
+  labels:
+    host_name: "CPU-02"
+    ipmi_target: "10.1.3.75"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.76
+  labels:
+    host_name: "CPU-03"
+    ipmi_target: "10.1.3.76"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.77
+  labels:
+    host_name: "CPU-04"
+    ipmi_target: "10.1.3.77"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.78
+  labels:
+    host_name: "ZP跳板机02"
+    ipmi_target: "10.1.3.78"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.79
+  labels:
+    host_name: "CPU-06"
+    ipmi_target: "10.1.3.79"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.80
+  labels:
+    host_name: "CPU-07"
+    ipmi_target: "10.1.3.80"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.81
+  labels:
+    host_name: "CPU-08"
+    ipmi_target: "10.1.3.81"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.82
+  labels:
+    host_name: "CPU-09"
+    ipmi_target: "10.1.3.82"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.3.83
+  labels:
+    host_name: "CPU-10"
+    ipmi_target: "10.1.3.83"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.193
+  labels:
+    host_name: "ZP-H200-001"
+    ipmi_target: "10.1.0.193"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.194
+  labels:
+    host_name: "ZP-H200-002"
+    ipmi_target: "10.1.0.194"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.195
+  labels:
+    host_name: "ZP-H200-003"
+    ipmi_target: "10.1.0.195"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.196
+  labels:
+    host_name: "ZP-H200-004"
+    ipmi_target: "10.1.0.196"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.197
+  labels:
+    host_name: "ZP-H200-005"
+    ipmi_target: "10.1.0.197"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.198
+  labels:
+    host_name: "ZP-H200-006"
+    ipmi_target: "10.1.0.198"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.199
+  labels:
+    host_name: "ZP-H200-007"
+    ipmi_target: "10.1.0.199"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.200
+  labels:
+    host_name: "ZP-H200-008"
+    ipmi_target: "10.1.0.200"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.201
+  labels:
+    host_name: "ZP-H200-009"
+    ipmi_target: "10.1.0.201"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.202
+  labels:
+    host_name: "ZP-H200-010"
+    ipmi_target: "10.1.0.202"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.203
+  labels:
+    host_name: "ZP-H200-011"
+    ipmi_target: "10.1.0.203"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.204
+  labels:
+    host_name: "ZP-H200-012"
+    ipmi_target: "10.1.0.204"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.205
+  labels:
+    host_name: "ZP-H200-013"
+    ipmi_target: "10.1.0.205"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.206
+  labels:
+    host_name: "ZP-H200-014"
+    ipmi_target: "10.1.0.206"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.207
+  labels:
+    host_name: "ZP-H200-015"
+    ipmi_target: "10.1.0.207"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.208
+  labels:
+    host_name: "ZP-H200-016"
+    ipmi_target: "10.1.0.208"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.209
+  labels:
+    host_name: "ZP-H200-017"
+    ipmi_target: "10.1.0.209"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.210
+  labels:
+    host_name: "ZP-H200-018"
+    ipmi_target: "10.1.0.210"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.211
+  labels:
+    host_name: "ZP-H200-019"
+    ipmi_target: "10.1.0.211"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.212
+  labels:
+    host_name: "ZP-H200-020"
+    ipmi_target: "10.1.0.212"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.213
+  labels:
+    host_name: "ZP-H200-021"
+    ipmi_target: "10.1.0.213"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.214
+  labels:
+    host_name: "ZP-H200-022"
+    ipmi_target: "10.1.0.214"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.215
+  labels:
+    host_name: "ZP-H200-023"
+    ipmi_target: "10.1.0.215"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.216
+  labels:
+    host_name: "ZP-H200-024"
+    ipmi_target: "10.1.0.216"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.217
+  labels:
+    host_name: "ZP-H200-025"
+    ipmi_target: "10.1.0.217"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.218
+  labels:
+    host_name: "ZP-H200-026"
+    ipmi_target: "10.1.0.218"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.219
+  labels:
+    host_name: "ZP-H200-027"
+    ipmi_target: "10.1.0.219"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.220
+  labels:
+    host_name: "ZP-H200-028"
+    ipmi_target: "10.1.0.220"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.221
+  labels:
+    host_name: "ZP-H200-029"
+    ipmi_target: "10.1.0.221"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.222
+  labels:
+    host_name: "ZP-H200-030"
+    ipmi_target: "10.1.0.222"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.223
+  labels:
+    host_name: "ZP-H200-031"
+    ipmi_target: "10.1.0.223"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.224
+  labels:
+    host_name: "ZP-H200-032"
+    ipmi_target: "10.1.0.224"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.225
+  labels:
+    host_name: "ZP-H200-033"
+    ipmi_target: "10.1.0.225"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.226
+  labels:
+    host_name: "ZP-H200-034"
+    ipmi_target: "10.1.0.226"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.227
+  labels:
+    host_name: "ZP-H200-035"
+    ipmi_target: "10.1.0.227"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.228
+  labels:
+    host_name: "ZP-H200-036"
+    ipmi_target: "10.1.0.228"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.229
+  labels:
+    host_name: "ZP-H200-037"
+    ipmi_target: "10.1.0.229"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.230
+  labels:
+    host_name: "ZP-H200-038"
+    ipmi_target: "10.1.0.230"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.231
+  labels:
+    host_name: "ZP-H200-039"
+    ipmi_target: "10.1.0.231"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.232
+  labels:
+    host_name: "ZP-H200-040"
+    ipmi_target: "10.1.0.232"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.233
+  labels:
+    host_name: "ZP-H200-041"
+    ipmi_target: "10.1.0.233"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.234
+  labels:
+    host_name: "ZP-H200-042"
+    ipmi_target: "10.1.0.234"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.0.235
+  labels:
+    host_name: "ZP-H200-043"
+    ipmi_target: "10.1.0.235"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.1
+  labels:
+    host_name: "ZP-H200-044"
+    ipmi_target: "10.1.1.1"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.2
+  labels:
+    host_name: "ZP-H200-045"
+    ipmi_target: "10.1.1.2"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.3
+  labels:
+    host_name: "ZP-H200-046"
+    ipmi_target: "10.1.1.3"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.4
+  labels:
+    host_name: "ZP-H200-047"
+    ipmi_target: "10.1.1.4"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.5
+  labels:
+    host_name: "ZP-H200-048"
+    ipmi_target: "10.1.1.5"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.6
+  labels:
+    host_name: "ZP-H200-049"
+    ipmi_target: "10.1.1.6"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.7
+  labels:
+    host_name: "ZP-H200-050"
+    ipmi_target: "10.1.1.7"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.8
+  labels:
+    host_name: "ZP-H200-051"
+    ipmi_target: "10.1.1.8"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.9
+  labels:
+    host_name: "ZP-H200-052"
+    ipmi_target: "10.1.1.9"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.10
+  labels:
+    host_name: "ZP-H200-053"
+    ipmi_target: "10.1.1.10"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.11
+  labels:
+    host_name: "ZP-H200-054"
+    ipmi_target: "10.1.1.11"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.12
+  labels:
+    host_name: "ZP-H200-055"
+    ipmi_target: "10.1.1.12"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.13
+  labels:
+    host_name: "ZP-H200-056"
+    ipmi_target: "10.1.1.13"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.14
+  labels:
+    host_name: "ZP-H200-057"
+    ipmi_target: "10.1.1.14"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.15
+  labels:
+    host_name: "ZP-H200-058"
+    ipmi_target: "10.1.1.15"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.16
+  labels:
+    host_name: "ZP-H200-059"
+    ipmi_target: "10.1.1.16"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.17
+  labels:
+    host_name: "ZP-H200-060"
+    ipmi_target: "10.1.1.17"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.18
+  labels:
+    host_name: "ZP-H200-061"
+    ipmi_target: "10.1.1.18"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.19
+  labels:
+    host_name: "ZP-H200-062"
+    ipmi_target: "10.1.1.19"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.20
+  labels:
+    host_name: "ZP-H200-063"
+    ipmi_target: "10.1.1.20"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.21
+  labels:
+    host_name: "ZP-H200-064"
+    ipmi_target: "10.1.1.21"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.22
+  labels:
+    host_name: "ZP-H200-065"
+    ipmi_target: "10.1.1.22"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.23
+  labels:
+    host_name: "ZP-H200-066"
+    ipmi_target: "10.1.1.23"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.24
+  labels:
+    host_name: "ZP-H200-067"
+    ipmi_target: "10.1.1.24"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.25
+  labels:
+    host_name: "ZP-H200-068"
+    ipmi_target: "10.1.1.25"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.26
+  labels:
+    host_name: "ZP-H200-069"
+    ipmi_target: "10.1.1.26"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.27
+  labels:
+    host_name: "ZP-H200-070"
+    ipmi_target: "10.1.1.27"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.28
+  labels:
+    host_name: "ZP-H200-071"
+    ipmi_target: "10.1.1.28"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.29
+  labels:
+    host_name: "ZP-H200-072"
+    ipmi_target: "10.1.1.29"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.30
+  labels:
+    host_name: "ZP-H200-073"
+    ipmi_target: "10.1.1.30"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.31
+  labels:
+    host_name: "ZP-H200-074"
+    ipmi_target: "10.1.1.31"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.32
+  labels:
+    host_name: "ZP-H200-075"
+    ipmi_target: "10.1.1.32"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.33
+  labels:
+    host_name: "ZP-H200-076"
+    ipmi_target: "10.1.1.33"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.34
+  labels:
+    host_name: "ZP-H200-077"
+    ipmi_target: "10.1.1.34"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.35
+  labels:
+    host_name: "ZP-H200-078"
+    ipmi_target: "10.1.1.35"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.36
+  labels:
+    host_name: "ZP-H200-079"
+    ipmi_target: "10.1.1.36"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.37
+  labels:
+    host_name: "ZP-H200-080"
+    ipmi_target: "10.1.1.37"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.38
+  labels:
+    host_name: "ZP-H200-081"
+    ipmi_target: "10.1.1.38"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.39
+  labels:
+    host_name: "ZP-H200-082"
+    ipmi_target: "10.1.1.39"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.40
+  labels:
+    host_name: "ZP-H200-083"
+    ipmi_target: "10.1.1.40"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.41
+  labels:
+    host_name: "ZP-H200-084"
+    ipmi_target: "10.1.1.41"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.42
+  labels:
+    host_name: "ZP-H200-085"
+    ipmi_target: "10.1.1.42"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.43
+  labels:
+    host_name: "ZP-H200-086"
+    ipmi_target: "10.1.1.43"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.65
+  labels:
+    host_name: "ZP-H200-087"
+    ipmi_target: "10.1.1.65"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.66
+  labels:
+    host_name: "ZP-H200-088"
+    ipmi_target: "10.1.1.66"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.67
+  labels:
+    host_name: "ZP-H200-089"
+    ipmi_target: "10.1.1.67"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.68
+  labels:
+    host_name: "ZP-H200-090"
+    ipmi_target: "10.1.1.68"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.69
+  labels:
+    host_name: "ZP-H200-091"
+    ipmi_target: "10.1.1.69"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.70
+  labels:
+    host_name: "ZP-H200-092"
+    ipmi_target: "10.1.1.70"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.71
+  labels:
+    host_name: "ZP-H200-093"
+    ipmi_target: "10.1.1.71"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.72
+  labels:
+    host_name: "ZP-H200-094"
+    ipmi_target: "10.1.1.72"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.73
+  labels:
+    host_name: "ZP-H200-095"
+    ipmi_target: "10.1.1.73"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.74
+  labels:
+    host_name: "ZP-H200-096"
+    ipmi_target: "10.1.1.74"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.75
+  labels:
+    host_name: "ZP-H200-097"
+    ipmi_target: "10.1.1.75"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.76
+  labels:
+    host_name: "ZP-H200-098"
+    ipmi_target: "10.1.1.76"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.77
+  labels:
+    host_name: "ZP-H200-099"
+    ipmi_target: "10.1.1.77"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.78
+  labels:
+    host_name: "ZP-H200-100"
+    ipmi_target: "10.1.1.78"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.79
+  labels:
+    host_name: "ZP-H200-101"
+    ipmi_target: "10.1.1.79"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.80
+  labels:
+    host_name: "ZP-H200-102"
+    ipmi_target: "10.1.1.80"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.81
+  labels:
+    host_name: "ZP-H200-103"
+    ipmi_target: "10.1.1.81"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.82
+  labels:
+    host_name: "ZP-H200-104"
+    ipmi_target: "10.1.1.82"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.83
+  labels:
+    host_name: "ZP-H200-105"
+    ipmi_target: "10.1.1.83"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.84
+  labels:
+    host_name: "ZP-H200-106"
+    ipmi_target: "10.1.1.84"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.85
+  labels:
+    host_name: "ZP-H200-107"
+    ipmi_target: "10.1.1.85"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.86
+  labels:
+    host_name: "ZP-H200-108"
+    ipmi_target: "10.1.1.86"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.87
+  labels:
+    host_name: "ZP-H200-109"
+    ipmi_target: "10.1.1.87"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.88
+  labels:
+    host_name: "ZP-H200-110"
+    ipmi_target: "10.1.1.88"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.89
+  labels:
+    host_name: "ZP-H200-111"
+    ipmi_target: "10.1.1.89"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.90
+  labels:
+    host_name: "ZP-H200-112"
+    ipmi_target: "10.1.1.90"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.91
+  labels:
+    host_name: "ZP-H200-113"
+    ipmi_target: "10.1.1.91"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.92
+  labels:
+    host_name: "ZP-H200-114"
+    ipmi_target: "10.1.1.92"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.93
+  labels:
+    host_name: "ZP-H200-115"
+    ipmi_target: "10.1.1.93"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.94
+  labels:
+    host_name: "ZP-H200-116"
+    ipmi_target: "10.1.1.94"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.95
+  labels:
+    host_name: "ZP-H200-117"
+    ipmi_target: "10.1.1.95"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.96
+  labels:
+    host_name: "ZP-H200-118"
+    ipmi_target: "10.1.1.96"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.97
+  labels:
+    host_name: "ZP-H200-119"
+    ipmi_target: "10.1.1.97"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.98
+  labels:
+    host_name: "ZP-H200-120"
+    ipmi_target: "10.1.1.98"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.99
+  labels:
+    host_name: "ZP-H200-121"
+    ipmi_target: "10.1.1.99"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.100
+  labels:
+    host_name: "ZP-H200-122"
+    ipmi_target: "10.1.1.100"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.101
+  labels:
+    host_name: "ZP-H200-123"
+    ipmi_target: "10.1.1.101"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.102
+  labels:
+    host_name: "ZP-H200-124"
+    ipmi_target: "10.1.1.102"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.103
+  labels:
+    host_name: "ZP-H200-125"
+    ipmi_target: "10.1.1.103"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.104
+  labels:
+    host_name: "ZP-H200-126"
+    ipmi_target: "10.1.1.104"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.105
+  labels:
+    host_name: "ZP-H200-127"
+    ipmi_target: "10.1.1.105"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"
+- targets:
+  - 10.1.1.106
+  labels:
+    host_name: "ZP-H200-128"
+    ipmi_target: "10.1.1.106"
+    data_center_id: "70c429cc-0897-4f81-965a-f7415a09080f"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "zhipu"

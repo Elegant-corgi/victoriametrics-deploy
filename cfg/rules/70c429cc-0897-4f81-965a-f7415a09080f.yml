@@ -1,0 +1,836 @@
+groups:
+- name: 告警测试
+  interval: 60s
+  rules:
+  - alert: afddd8c9f00e42a55fecadf77f014b1d
+    expr: ifOperStatus{asset_owner="乐讯",auth="public_v2",cabinet="204-C01",data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",device_name="ZP2-Calc-Leaf01-1",device_type="网络设备",end_u="45U",function_area="计算网络Leaf",ifAlias="Link-to-204-D10-39U-ZP-NETOOB-TOR-01_GigabitEthernet0/0/1",ifDescr="Mgmt
+      0",ifIndex="8193",ifName="Mg0",instance="10.1.3.193",job="snmp_zhipu",model="锐捷
+      RG-S6990-128QC2XS",project="zhipu",snmp_target="10.1.3.193",start_u="42U"}
+    for: 0s
+    labels:
+      alert_template: 告警测试
+      alert_template_id: f0b1b51c-e277-469d-84b3-4c07c7282652
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: ifOperStatus{asset_owner="乐讯",auth="public_v2",cabinet="204-C01",data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",device_name="ZP2-Calc-Leaf01-1",device_type="网络设备",end_u="45U",function_area="计算网络Leaf",ifAlias="Link-to-204-D10-39U-ZP-NETOOB-TOR-01_GigabitEthernet0/0/1",ifDescr="Mgmt
+        0",ifIndex="8193",ifName="Mg0",instance="10.1.3.193",job="snmp_zhipu",model="锐捷
+        RG-S6990-128QC2XS",project="zhipu",snmp_target="10.1.3.193",start_u="42U"}
+        in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert afddd8c9f00e42a55fecadf77f014b1d in 告警测试 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-处理器类状态异常
+  interval: 60s
+  rules:
+  - alert: 81d6649aaa62a48a553b002009a8c6fe
+    expr: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Processor"}
+      > 0
+    for: 60s
+    labels:
+      alert_template: BMC-处理器类状态异常
+      alert_template_id: 806225f2-ee48-43a6-b4af-a4427c3bf404
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Processor"}
+        > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 81d6649aaa62a48a553b002009a8c6fe in BMC-处理器类状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-日志事件关闭
+  interval: 30s
+  rules:
+  - alert: 1d3579fa6045b853fef15ab1cfcd5f80
+    expr: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Event
+      Logging Disabled"} > 0
+    for: 300s
+    labels:
+      alert_template: BMC-日志事件关闭
+      alert_template_id: cdc29dd9-d5f1-4765-afb7-805cfb238ad9
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Event
+        Logging Disabled"} > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 30s'
+      summary: Alert 1d3579fa6045b853fef15ab1cfcd5f80 in BMC-日志事件关闭 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 半小时抖动超10次
+  interval: 60s
+  rules:
+  - alert: c6b0552a0bc324008ed8ee04eee0c30e
+    expr: increase(ruijieIfUpDownTimes{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[30m])
+      > 10
+    for: 300s
+    labels:
+      alert_template: 半小时抖动超10次
+      alert_template_id: 12e532c6-84ca-4d63-ba33-d5046ce22b52
+      severity: 严重
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: increase(ruijieIfUpDownTimes{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[30m])
+        > 10 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert c6b0552a0bc324008ed8ee04eee0c30e in 半小时抖动超10次 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: ping丢包告警
+  interval: 30s
+  rules:
+  - alert: 4aca8bb408a92e70bee8339ffd2c2f2e
+    expr: (max_over_time(((100 * clamp_min(1 - (increase(smokeping_response_duration_seconds_count{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m])
+      / clamp_min(increase(smokeping_requests_total{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m]),
+      1)), 0)) > bool 2)[3d:5m]) > 0) unless (min_over_time(((100 * clamp_min(1 -
+      (increase(smokeping_response_duration_seconds_count{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m])
+      / clamp_min(increase(smokeping_requests_total{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m]),
+      1)), 0)) > bool 2)[3d:5m]) > 0)
+    for: 0s
+    labels:
+      alert_template: ping丢包告警
+      alert_template_id: 90aa3aa6-317f-4b32-8e6f-a968c3645ca5
+      info: 20分钟丢包率超过2%
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: (max_over_time(((100 * clamp_min(1
+        - (increase(smokeping_response_duration_seconds_count{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m])
+        / clamp_min(increase(smokeping_requests_total{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m]),
+        1)), 0)) > bool 2)[3d:5m]) > 0) unless (min_over_time(((100 * clamp_min(1
+        - (increase(smokeping_response_duration_seconds_count{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m])
+        / clamp_min(increase(smokeping_requests_total{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[20m]),
+        1)), 0)) > bool 2)[3d:5m]) > 0) in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 30s'
+      summary: Alert 4aca8bb408a92e70bee8339ffd2c2f2e in ping丢包告警 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 网口DOWN
+  interval: 60s
+  rules:
+  - alert: d16f96b552152fb137cfbc6a2546deb2
+    expr: (min_over_time(ifOperStatus{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[2m])
+      > 1.5) and (min_over_time(ifOperStatus{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[2d])
+      < 1.5)
+    for: 0s
+    labels:
+      alert_template: 网口DOWN
+      alert_template_id: d9e6a1d4-de8f-4901-adf2-3caccb425186
+      info: 网口DOWN超过2分钟
+      severity: 主要
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: (min_over_time(ifOperStatus{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[2m])
+        > 1.5) and (min_over_time(ifOperStatus{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[2d])
+        < 1.5) in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert d16f96b552152fb137cfbc6a2546deb2 in 网口DOWN template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-内存类状态异常
+  interval: 60s
+  rules:
+  - alert: c4e37c68b6470f4c76791ee1cf3d1321
+    expr: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Memory"}
+      > 0
+    for: 60s
+    labels:
+      alert_template: BMC-内存类状态异常
+      alert_template_id: 924f0af8-b857-483e-a53d-a754d91f06b8
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Memory"}
+        > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert c4e37c68b6470f4c76791ee1cf3d1321 in BMC-内存类状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: CPU状态异常
+  interval: 60s
+  rules:
+  - alert: b0d583931f312fc54d6399a24c49781e
+    expr: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Processor"}
+      != 0
+    for: 60s
+    labels:
+      alert_template: CPU状态异常
+      alert_template_id: ccf1df67-1b1f-4091-b5cf-00982073c084
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type="Processor"}
+        != 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert b0d583931f312fc54d6399a24c49781e in CPU状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 监控节点存储挂载断开
+  interval: 60s
+  rules:
+  - alert: 0bcd95c90773f25382a56d684e7a3208
+    expr: absent(node_filesystem_device_error{mountpoint="/data/local"})
+    for: 60s
+    labels:
+      alert_template: 监控节点存储挂载断开
+      alert_template_id: f692fb0f-c63e-4211-ae89-e63c626fa001
+      mountpoint: /data/local
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: absent(node_filesystem_device_error{mountpoint="/data/local"})
+        in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 0bcd95c90773f25382a56d684e7a3208 in 监控节点存储挂载断开 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 监控管理节点数据盘挂载丢失
+  interval: 60s
+  rules:
+  - alert: b9dff097bf396cacbc8b1b347988fd21
+    expr: ((up{device_type="监控管理节点",job="node"} == 1) unless on (instance) node_filesystem_size_bytes{device_type="监控管理节点",mountpoint="/data/local"})
+      or (node_filesystem_device_error{device_type="监控管理节点",mountpoint="/data/local"}
+      == 1)
+    for: 60s
+    labels:
+      alert_template: 监控管理节点数据盘挂载丢失
+      alert_template_id: f534a646-192f-4b02-952d-2d20befcc5ea
+      moutpoint: /data/local
+      severity: 紧急
+    annotations:
+      description: 'This alert is triggered by rule: ((up{device_type="监控管理节点",job="node"}
+        == 1) unless on (instance) node_filesystem_size_bytes{device_type="监控管理节点",mountpoint="/data/local"})
+        or (node_filesystem_device_error{device_type="监控管理节点",mountpoint="/data/local"}
+        == 1) in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert b9dff097bf396cacbc8b1b347988fd21 in 监控管理节点数据盘挂载丢失 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: XID故障-高优先级
+  interval: 60s
+  rules:
+  - alert: 8344ae52a9e20c7d8b5f0aea89071522
+    expr: sum by (instance, err_code, err_msg, data_center_id, Hostname) ((DCGM_FI_DEV_XID_ERRORS{err_code!~"0|13|31|43|45"}
+      != 0) and on (UUID, instance) (DCGM_FI_DEV_XID_ERRORS offset 5m == 0))
+    for: 0s
+    labels:
+      alert_template: XID故障-高优先级
+      alert_template_id: d5a115d9-1c4c-4aa3-a5c7-8e3759462a33
+      severity: 紧急
+      suggestion: 联系平台处理
+    annotations:
+      description: 'This alert is triggered by rule: sum by (instance, err_code, err_msg,
+        data_center_id, Hostname) ((DCGM_FI_DEV_XID_ERRORS{err_code!~"0|13|31|43|45"}
+        != 0) and on (UUID, instance) (DCGM_FI_DEV_XID_ERRORS offset 5m == 0)) in
+        data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 8344ae52a9e20c7d8b5f0aea89071522 in XID故障-高优先级 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: H100存储网络降速
+  interval: 30s
+  rules:
+  - alert: b85744974c7504c6bcca7cee16734d7c
+    expr: node_network_speed_bytes{device="ibp86s0"} != 2.5e+10
+    for: 60s
+    labels:
+      alert_template: H100存储网络降速
+      alert_template_id: c3b0fdc6-fb80-4c62-80bf-2a66d76e91f5
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: node_network_speed_bytes{device="ibp86s0"}
+        != 2.5e+10 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle:
+        30s'
+      summary: Alert b85744974c7504c6bcca7cee16734d7c in H100存储网络降速 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: H100-IB网卡DOWN
+  interval: 5s
+  rules:
+  - alert: d5bb461874951337db56e32e53f0e6d5
+    expr: node_infiniband_state_id{device_type="H100"} != 4 and on (data_center_id,
+      job) up{app="node-exporter",job="node"} == 1
+    for: 0s
+    labels:
+      alert_template: H100-IB网卡DOWN
+      alert_template_id: bbe1bd77-aef8-472d-afdc-74a32dd1117c
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: node_infiniband_state_id{device_type="H100"}
+        != 4 and on (data_center_id, job) up{app="node-exporter",job="node"} == 1
+        in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 5s'
+      summary: Alert d5bb461874951337db56e32e53f0e6d5 in H100-IB网卡DOWN template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: H100算力网络降速
+  interval: 60s
+  rules:
+  - alert: 026d1dbc05e4689adab1de21700ed2b3
+    expr: (node_network_speed_bytes{device=~"^ibp.*",device_type="H100"} and node_network_speed_bytes{device!="ibp86s0"})
+      != 5e+10
+    for: 120s
+    labels:
+      alert_template: H100算力网络降速
+      alert_template_id: b6677849-9a2f-4e66-8308-480d0cd46274
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: (node_network_speed_bytes{device=~"^ibp.*",device_type="H100"}
+        and node_network_speed_bytes{device!="ibp86s0"}) != 5e+10 in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 60s'
+      summary: Alert 026d1dbc05e4689adab1de21700ed2b3 in H100算力网络降速 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-电压异常
+  interval: 60s
+  rules:
+  - alert: c3ca9a5f82584dfd01d65d85b73ec964
+    expr: ipmi_voltage_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+      > 0
+    for: 120s
+    labels:
+      alert_template: BMC-电压异常
+      alert_template_id: b3187417-48f2-41f6-ab74-6b9444795ab8
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_voltage_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+        > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert c3ca9a5f82584dfd01d65d85b73ec964 in BMC-电压异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 防火墙输出流量超出限制-45MB
+  interval: 60s
+  rules:
+  - alert: 5eb8d31c25be4be205b335ee5fb4093e
+    expr: rate(ifHCOutOctets{ifName="GigabitEthernet2/0/7",instance="172.16.201.1"}[2m])
+      > 45 * 1024 ^ 2
+    for: 60s
+    labels:
+      alert_template: 防火墙输出流量超出限制-45MB
+      alert_template_id: af2d421b-c4c3-4547-b283-e2e524d5863c
+      severity: 次要
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: rate(ifHCOutOctets{ifName="GigabitEthernet2/0/7",instance="172.16.201.1"}[2m])
+        > 45 * 1024 ^ 2 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check
+        cycle: 60s'
+      summary: Alert 5eb8d31c25be4be205b335ee5fb4093e in 防火墙输出流量超出限制-45MB template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: GPU_PCIe链路降速
+  interval: 30s
+  rules:
+  - alert: 6b1e4051b426cdbad23af4371d357dbf
+    expr: nvidia_smi_pcie_link_width_current{device_type!="RTX4090"} != 16
+    for: 60s
+    labels:
+      alert_template: GPU_PCIe链路降速
+      alert_template_id: aeb2a759-408c-442b-ade0-374c52c902d7
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: nvidia_smi_pcie_link_width_current{device_type!="RTX4090"}
+        != 16 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert 6b1e4051b426cdbad23af4371d357dbf in GPU_PCIe链路降速 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: XID故障-低优先级
+  interval: 60s
+  rules:
+  - alert: 1930a3c8e32c6e4f452d3cfd76385080
+    expr: sum by (instance, err_code, err_msg, data_center_id, Hostname) ((DCGM_FI_DEV_XID_ERRORS{err_code=~"0|13|31|43|45"}
+      != 0) and on (UUID, instance) (DCGM_FI_DEV_XID_ERRORS offset 5m == 0))
+    for: 0s
+    labels:
+      alert_template: XID故障-低优先级
+      alert_template_id: acd110c5-0cf6-4374-9daf-bb0b085ed80e
+      severity: 次要
+      suggestion: 尝试自行解决
+    annotations:
+      description: 'This alert is triggered by rule: sum by (instance, err_code, err_msg,
+        data_center_id, Hostname) ((DCGM_FI_DEV_XID_ERRORS{err_code=~"0|13|31|43|45"}
+        != 0) and on (UUID, instance) (DCGM_FI_DEV_XID_ERRORS offset 5m == 0)) in
+        data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 1930a3c8e32c6e4f452d3cfd76385080 in XID故障-低优先级 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 防火墙输入流量超出限制-45MB
+  interval: 60s
+  rules:
+  - alert: 86c81b53a652f58328056a448624406a
+    expr: rate(ifHCInOctets{ifName="GigabitEthernet2/0/7",instance="172.16.201.1"}[2m])
+      > 45 * 1024 ^ 2
+    for: 60s
+    labels:
+      alert_template: 防火墙输入流量超出限制-45MB
+      alert_template_id: a7726bd3-b55f-4352-9996-92a5ac32e47b
+      severity: 次要
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: rate(ifHCInOctets{ifName="GigabitEthernet2/0/7",instance="172.16.201.1"}[2m])
+        > 45 * 1024 ^ 2 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check
+        cycle: 60s'
+      summary: Alert 86c81b53a652f58328056a448624406a in 防火墙输入流量超出限制-45MB template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: SNMP数据获取失败
+  interval: 60s
+  rules:
+  - alert: cdbce4901de175a37dd462541b5ba117
+    expr: avg_over_time(up{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",job=~"snmp.*"}[5m])
+      == 0
+    for: 300s
+    labels:
+      alert_template: SNMP数据获取失败
+      alert_template_id: a5d796c0-9063-43ba-a3ad-7dcd57622696
+      info: 超过5分钟未获取到数据
+      severity: 严重
+      type: 链路
+    annotations:
+      description: 'This alert is triggered by rule: avg_over_time(up{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",job=~"snmp.*"}[5m])
+        == 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert cdbce4901de175a37dd462541b5ba117 in SNMP数据获取失败 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-风扇异常
+  interval: 60s
+  rules:
+  - alert: 9a47aca2d56c95d141ccec1ff70eb4a0
+    expr: (avg_over_time(ipmi_fan_speed_rpm{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[3m])
+      < 1000) and on (instance, device) (count_over_time((ipmi_fan_speed_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+      > 0)[1h:15s]) >= 1)
+    for: 0s
+    labels:
+      alert_template: BMC-风扇异常
+      alert_template_id: a138226b-b7c1-43a7-a64f-abae01f39c56
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: (avg_over_time(ipmi_fan_speed_rpm{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}[3m])
+        < 1000) and on (instance, device) (count_over_time((ipmi_fan_speed_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+        > 0)[1h:15s]) >= 1) in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check
+        cycle: 60s'
+      summary: Alert 9a47aca2d56c95d141ccec1ff70eb4a0 in BMC-风扇异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-通用硬件状态异常
+  interval: 30s
+  rules:
+  - alert: fe3e4abdb47c2b2ddd3de2734e23babb
+    expr: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type!~"Entity
+      Presence|System Event|System Firmware Progress|Memory|Processor|Event Logging
+      Disabled"} > 0
+    for: 300s
+    labels:
+      alert_template: BMC-通用硬件状态异常
+      alert_template_id: 92a8fa7b-aec3-4dc2-b5a2-c2b6e3f93444
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_sensor_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f",type!~"Entity
+        Presence|System Event|System Firmware Progress|Memory|Processor|Event Logging
+        Disabled"} > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check
+        cycle: 30s'
+      summary: Alert fe3e4abdb47c2b2ddd3de2734e23babb in BMC-通用硬件状态异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 磁盘使用率过高
+  interval: 30s
+  rules:
+  - alert: 4d2740b8070deaf94680268c442d62b8
+    expr: 100 - ((node_filesystem_avail_bytes{fstype!="rootfs",job="node",mountpoint="/"}
+      * 100) / node_filesystem_size_bytes{fstype!="rootfs",job="node",mountpoint="/"})
+      > 95
+    for: 60s
+    labels:
+      alert_template: 磁盘使用率过高
+      alert_template_id: 7db2b12d-5911-4816-ab9a-3ae902179b42
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: 100 - ((node_filesystem_avail_bytes{fstype!="rootfs",job="node",mountpoint="/"}
+        * 100) / node_filesystem_size_bytes{fstype!="rootfs",job="node",mountpoint="/"})
+        > 95 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert 4d2740b8070deaf94680268c442d62b8 in 磁盘使用率过高 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+  - alert: f9d6831e2ded9e24a982ad9ebf0e249d
+    expr: 100 - ((node_filesystem_avail_bytes{fstype!="rootfs",job="node",mountpoint="/"}
+      * 100) / node_filesystem_size_bytes{fstype!="rootfs",job="node",mountpoint="/"})
+      > 90
+    for: 60s
+    labels:
+      alert_template: 磁盘使用率过高
+      alert_template_id: 7db2b12d-5911-4816-ab9a-3ae902179b42
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: 100 - ((node_filesystem_avail_bytes{fstype!="rootfs",job="node",mountpoint="/"}
+        * 100) / node_filesystem_size_bytes{fstype!="rootfs",job="node",mountpoint="/"})
+        > 90 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert f9d6831e2ded9e24a982ad9ebf0e249d in 磁盘使用率过高 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 网络失活-内网
+  interval: 30s
+  rules:
+  - alert: b9711beb574148b8b0ac0aec3b386986
+    expr: ((1 - avg_over_time(probe_success{target!="10.111.101.253",target!="www.dingtalk.com"}[5m])
+      > 0.4) * 100) and on (target) label_replace(up{app="node-exporter",job="node"}
+      != 0, "target", "$1", "instance", "(.*)")
+    for: 300s
+    labels:
+      alert_template: 网络失活-内网
+      alert_template_id: 77602475-3cce-4b35-b467-03e5ada1821b
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: ((1 - avg_over_time(probe_success{target!="10.111.101.253",target!="www.dingtalk.com"}[5m])
+        > 0.4) * 100) and on (target) label_replace(up{app="node-exporter",job="node"}
+        != 0, "target", "$1", "instance", "(.*)") in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 30s'
+      summary: Alert b9711beb574148b8b0ac0aec3b386986 in 网络失活-内网 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 节点失活
+  interval: 15s
+  rules:
+  - alert: 1529323ccf88cb3706628b434f643201
+    expr: up{app="node-exporter",job="node"} == 0
+    for: 90s
+    labels:
+      alert_template: 节点失活
+      alert_template_id: 65a1ead7-0599-473e-a42f-dfbb6153a1f1
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: up{app="node-exporter",job="node"}
+        == 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 15s'
+      summary: Alert 1529323ccf88cb3706628b434f643201 in 节点失活 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 节点进程堵塞
+  interval: 30s
+  rules:
+  - alert: 7134bb7d2ad6cf0b78d6780c3cb4f435
+    expr: up{job="node"} == 1 unless on (instance) node_procs_blocked
+    for: 120s
+    labels:
+      alert_template: 节点进程堵塞
+      alert_template_id: 5fa1c27e-fd12-41b0-b322-cac7ceafb33f
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: up{job="node"} == 1 unless on
+        (instance) node_procs_blocked in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 30s'
+      summary: Alert 7134bb7d2ad6cf0b78d6780c3cb4f435 in 节点进程堵塞 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: GPU_PCIe链路降速-4090
+  interval: 30s
+  rules:
+  - alert: a9db4ddaeaa19df43d069127ab13af2f
+    expr: nvidia_smi_pcie_link_width_current{device_type="RTX4090"} < 8
+    for: 60s
+    labels:
+      alert_template: GPU_PCIe链路降速-4090
+      alert_template_id: 5eed86e8-53aa-4fdc-932a-518c51526446
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: nvidia_smi_pcie_link_width_current{device_type="RTX4090"}
+        < 8 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert a9db4ddaeaa19df43d069127ab13af2f in GPU_PCIe链路降速-4090 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: XID错误
+  interval: 60s
+  rules:
+  - alert: 748c8f241cc7c15dc906593606787309
+    expr: (DCGM_FI_DEV_XID_ERRORS - (DCGM_FI_DEV_XID_ERRORS offset 2m unless DCGM_FI_DEV_XID_ERRORS
+      offset 2m == 0)) > 0
+    for: 0s
+    labels:
+      alert_template: XID错误
+      alert_template_id: 56036a56-db88-4481-8c80-e238ab4d4e06
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: (DCGM_FI_DEV_XID_ERRORS - (DCGM_FI_DEV_XID_ERRORS
+        offset 2m unless DCGM_FI_DEV_XID_ERRORS offset 2m == 0)) > 0 in data center
+        70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 748c8f241cc7c15dc906593606787309 in XID错误 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 存储挂载断开-2
+  interval: 60s
+  rules:
+  - alert: 2ff5e6f71b6cdd85cde1d342cf617760
+    expr: absent(node_filesystem_device_error{mountpoint="/mnt/public"})
+    for: 60s
+    labels:
+      alert_template: 存储挂载断开-2
+      alert_template_id: 532c6a08-f809-41cc-a740-8ffcc4e5950e
+      mountpoint: /mnt/public
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: absent(node_filesystem_device_error{mountpoint="/mnt/public"})
+        in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 2ff5e6f71b6cdd85cde1d342cf617760 in 存储挂载断开-2 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-电源异常
+  interval: 60s
+  rules:
+  - alert: 392bc494604adbe022a7abe684fa9a1b
+    expr: ipmi_chassis_power_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+      > 2
+    for: 0s
+    labels:
+      alert_template: BMC-电源异常
+      alert_template_id: 4e789d76-cbec-4ebc-8fed-2de15e08cfed
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_chassis_power_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+        > 2 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 392bc494604adbe022a7abe684fa9a1b in BMC-电源异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: RTX4090-Bond25网络降速
+  interval: 60s
+  rules:
+  - alert: 838f425d34d4abd6d0c764e0f8124088
+    expr: node_network_speed_bytes{device="bond25",device_type="RTX4090"} != 6.25e+09
+    for: 120s
+    labels:
+      alert_template: RTX4090-Bond25网络降速
+      alert_template_id: 3eacdd00-24b7-4590-a8b2-7e9dca48344e
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: node_network_speed_bytes{device="bond25",device_type="RTX4090"}
+        != 6.25e+09 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle:
+        60s'
+      summary: Alert 838f425d34d4abd6d0c764e0f8124088 in RTX4090-Bond25网络降速 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 内存占用过高
+  interval: 30s
+  rules:
+  - alert: 249a6f2a41c11f66f9553ab545fa6bf9
+    expr: round((node_memory_MemTotal_bytes{job="node"} - node_memory_MemFree_bytes{job="node"}
+      - node_memory_Buffers_bytes{job="node"} - node_memory_Cached_bytes{job="node"}
+      - node_memory_SReclaimable_bytes{job="node"}) / node_memory_MemTotal_bytes{job="node"}
+      * 10000) / 100 > 95
+    for: 60s
+    labels:
+      alert_template: 内存占用过高
+      alert_template_id: 3af7d3b0-7427-4d10-892a-aeca9759ee60
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: round((node_memory_MemTotal_bytes{job="node"}
+        - node_memory_MemFree_bytes{job="node"} - node_memory_Buffers_bytes{job="node"}
+        - node_memory_Cached_bytes{job="node"} - node_memory_SReclaimable_bytes{job="node"})
+        / node_memory_MemTotal_bytes{job="node"} * 10000) / 100 > 95 in data center
+        70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert 249a6f2a41c11f66f9553ab545fa6bf9 in 内存占用过高 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+  - alert: 7b839f5ce9f5eca9176f5f84d6c77f59
+    expr: round((node_memory_MemTotal_bytes{job="node"} - node_memory_MemFree_bytes{job="node"}
+      - node_memory_Buffers_bytes{job="node"} - node_memory_Cached_bytes{job="node"}
+      - node_memory_SReclaimable_bytes{job="node"}) / node_memory_MemTotal_bytes{job="node"}
+      * 10000) / 100 > 98
+    for: 60s
+    labels:
+      alert_template: 内存占用过高
+      alert_template_id: 3af7d3b0-7427-4d10-892a-aeca9759ee60
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: round((node_memory_MemTotal_bytes{job="node"}
+        - node_memory_MemFree_bytes{job="node"} - node_memory_Buffers_bytes{job="node"}
+        - node_memory_Cached_bytes{job="node"} - node_memory_SReclaimable_bytes{job="node"})
+        / node_memory_MemTotal_bytes{job="node"} * 10000) / 100 > 98 in data center
+        70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert 7b839f5ce9f5eca9176f5f84d6c77f59 in 内存占用过高 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 延时超过100ms
+  interval: 30s
+  rules:
+  - alert: e8461ecc6ff1e9586e876319dfece54f
+    expr: probe_icmp_duration_seconds{phase="rtt",target="172.19.36.1"} > 0.1
+    for: 60s
+    labels:
+      alert_template: 延时超过100ms
+      alert_template_id: 35ccba10-890c-4115-a31d-68de8d5abaa7
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: probe_icmp_duration_seconds{phase="rtt",target="172.19.36.1"}
+        > 0.1 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert e8461ecc6ff1e9586e876319dfece54f in 延时超过100ms template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: IB网卡PCIe链路降速
+  interval: 30s
+  rules:
+  - alert: 971cf5451a74478ccacfcbfbabba89f4
+    expr: count by (instance, device_type) (pcie_link_status{device_type=~".*"} ==
+      0) > 0
+    for: 120s
+    labels:
+      alert_template: IB网卡PCIe链路降速
+      alert_template_id: 3242d08b-631a-461f-9a81-bd7dca2c734f
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: count by (instance, device_type)
+        (pcie_link_status{device_type=~".*"} == 0) > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 30s'
+      summary: Alert 971cf5451a74478ccacfcbfbabba89f4 in IB网卡PCIe链路降速 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: BMC-温度异常
+  interval: 60s
+  rules:
+  - alert: fcf94a08be15b0ea195a6736e515bbd1
+    expr: ipmi_temperature_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+      > 0
+    for: 0s
+    labels:
+      alert_template: BMC-温度异常
+      alert_template_id: 2db6428d-6353-49d7-9906-29ffaf88e1b9
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: ipmi_temperature_state{data_center_id="70c429cc-0897-4f81-965a-f7415a09080f"}
+        > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert fcf94a08be15b0ea195a6736e515bbd1 in BMC-温度异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 网络失活-外网
+  interval: 30s
+  rules:
+  - alert: 5efba56edc60707bbd66c81f9fea451f
+    expr: ((count_over_time(probe_icmp_reply_hop_limit{target="www.dingtalk.com"}[5m])
+      < bool 2) and on (instance, job, target) up{job=~"blackbox-.*",target="www.dingtalk.com"})
+      == 1
+    for: 60s
+    labels:
+      alert_template: 网络失活-外网
+      alert_template_id: 19d046e8-ce6c-4b9c-966d-719f60bee745
+      severity: 次要
+    annotations:
+      description: 'This alert is triggered by rule: ((count_over_time(probe_icmp_reply_hop_limit{target="www.dingtalk.com"}[5m])
+        < bool 2) and on (instance, job, target) up{job=~"blackbox-.*",target="www.dingtalk.com"})
+        == 1 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert 5efba56edc60707bbd66c81f9fea451f in 网络失活-外网 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: DCGM探针失活
+  interval: 60s
+  rules:
+  - alert: e31ad6fa632e3a4503f44a0999486168
+    expr: up{app="dcgm_exporter"} == 0 and on (instance) up{app="node-exporter"} ==
+      1
+    for: 300s
+    labels:
+      alert_template: DCGM探针失活
+      alert_template_id: 17b089fd-2288-48ea-a04d-0caf9bed609f
+      info: 已超过5分钟未获取到探针数据
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: up{app="dcgm_exporter"} == 0
+        and on (instance) up{app="node-exporter"} == 1 in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 60s'
+      summary: Alert e31ad6fa632e3a4503f44a0999486168 in DCGM探针失活 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: 存储挂载异常
+  interval: 30s
+  rules:
+  - alert: ffa2270fc7a46a92181d787348a4ab05
+    expr: node_filesystem_device_error{mountpoint=~"/gpfs|/mnt/public/E6|/mnt/fs|/mnt/public|/data/local"}
+      > 0
+    for: 60s
+    labels:
+      alert_template: 存储挂载异常
+      alert_template_id: 14dbce74-4b5a-4b2e-acb2-6cb3e0756eb7
+      severity: 主要
+    annotations:
+      description: 'This alert is triggered by rule: node_filesystem_device_error{mountpoint=~"/gpfs|/mnt/public/E6|/mnt/fs|/mnt/public|/data/local"}
+        > 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 30s'
+      summary: Alert ffa2270fc7a46a92181d787348a4ab05 in 存储挂载异常 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: GPU掉卡
+  interval: 60s
+  rules:
+  - alert: 9c456728cadf88ff7be19ab6adad91fb
+    expr: (count by (instance, uuid) (nvidia_smi_gpu_info) != count by (instance,
+      uuid) (max_over_time(nvidia_smi_gpu_info[10m]))) and on (instance, uuid) present_over_time(nvidia_smi_gpu_info[10m])
+      == 1
+    for: 0s
+    labels:
+      alert_template: GPU掉卡
+      alert_template_id: 14851d2e-dc4f-4ed0-a2f1-9e7a3a81d9e9
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: (count by (instance, uuid) (nvidia_smi_gpu_info)
+        != count by (instance, uuid) (max_over_time(nvidia_smi_gpu_info[10m]))) and
+        on (instance, uuid) present_over_time(nvidia_smi_gpu_info[10m]) == 1 in data
+        center 70c429cc-0897-4f81-965a-f7415a09080f. Check cycle: 60s'
+      summary: Alert 9c456728cadf88ff7be19ab6adad91fb in GPU掉卡 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: CPU占用过高
+  interval: 30s
+  rules:
+  - alert: 0ef1946369267070f9da08a280e4c394
+    expr: 100 * (1 - avg by (instance) (rate(node_cpu_seconds_total{mode="idle"}[5m])))
+      > 99
+    for: 600s
+    labels:
+      alert_template: CPU占用过高
+      alert_template_id: 0270ca5e-0c9a-4e85-aeee-91db25534603
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: 100 * (1 - avg by (instance)
+        (rate(node_cpu_seconds_total{mode="idle"}[5m]))) > 99 in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 30s'
+      summary: Alert 0ef1946369267070f9da08a280e4c394 in CPU占用过高 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'
+- name: CPU高性能模式被关闭
+  interval: 60s
+  rules:
+  - alert: 85d147cd7f32b2d0ed7f1adfb305054a
+    expr: min by (instance, device_type) (cpu_governor_mode_current) == 0
+    for: 120s
+    labels:
+      alert_template: CPU高性能模式被关闭
+      alert_template_id: 010ede6b-6785-43fd-bd61-48b0a0eff853
+      severity: 严重
+    annotations:
+      description: 'This alert is triggered by rule: min by (instance, device_type)
+        (cpu_governor_mode_current) == 0 in data center 70c429cc-0897-4f81-965a-f7415a09080f.
+        Check cycle: 60s'
+      summary: Alert 85d147cd7f32b2d0ed7f1adfb305054a in CPU高性能模式被关闭 template
+      trigger_value: '{{ if eq (printf "%.0f" $value) (printf "%v" $value) }}{{ printf
+        "%.0f" $value }}{{ else }}{{ printf "%.2f" $value }}{{ end }}'
+      value: '{{ $value }}'

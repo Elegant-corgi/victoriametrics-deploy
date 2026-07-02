@@ -1,0 +1,7 @@
+- targets:
+  - 10.27.3.68:9115
+  labels:
+    app: blackbox-exporter
+    job: node-blackbox
+    device_type: 监控管理节点
+    data_center_id: 70c429cc-0897-4f81-965a-f7415a09080f

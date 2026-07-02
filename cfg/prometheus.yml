@@ -1,0 +1,204 @@
+# my global config
+global:
+  scrape_interval: 15s # Set the scrape interval to every 15 seconds. Default is every 1 minute.
+  # scrape_timeout is set to the global default (10s).
+
+# A scrape configuration containing exactly one endpoint to scrape:
+# Here it's Prometheus itself.
+scrape_configs:
+  # The job name is added as a label `job=<job_name>` to any timeseries scraped from this config.
+  - job_name: 'victoriametrics'
+    static_configs:
+      - targets: ['localhost:8480']  # vminsert
+      - targets: ['localhost:8481']  # vmselect  
+      - targets: ['localhost:8482']  # vmstorage
+    metrics_path: /metrics
+
+  - job_name: 'vmalert'
+    static_configs:
+      - targets: ['localhost:8880']
+    metrics_path: /metrics
+
+  - job_name: 'vmagent'
+    static_configs:
+      - targets: ['localhost:8429']
+    metrics_path: /metrics
+
+  - job_name: 'node_exporter'
+    scrape_interval: 5s
+    file_sd_configs:
+      - files:
+        - nodes_*.yaml
+    relabel_configs:  
+      - source_labels: [__address__]
+        regex: '([^:]+)(:\d+)?'       
+        replacement: '${1}'             
+        target_label: instance                            
+      - source_labels: [__address__]                                    
+        target_label: __address__ 
+  - job_name: blackbox_exporter # To get metrics about the exporter itself
+    metrics_path: /metrics
+    scrape_interval: 5s
+    file_sd_configs:
+      - files:
+        - blackbox_*.yaml
+    relabel_configs:
+      - target_label: job
+        replacement: blackbox-exporter  # 为目标添加 job 标签
+      - target_label: instance_type
+        replacement: exporter         # 为目标添加额外的标签
+
+  - job_name: 'blackbox'
+    scrape_interval: 30s
+    scrape_timeout: 30s
+    metrics_path: /probe
+    file_sd_configs:
+      - files:
+          - ./file_sd_configs/blackbox_targets-*.yaml
+    relabel_configs:
+      # adds "module" label in the final labelset
+      - source_labels: [__address__]
+        regex: '.*:_:(.*):_:.*'
+        target_label: module
+      # rewrites "target" label with corresponding URL
+      - source_labels: [__address__]
+        regex: '.*:_:.*:_:(.*)'
+        target_label: target
+      # passes "module" parameter to Blackbox exporter
+      - source_labels: [module]
+        target_label: __param_module
+      # passes "target" parameter to Blackbox exporter
+      - source_labels: [target]
+        target_label: __param_target
+      # the Blackbox exporter's real hostname:port
+      - source_labels: [__address__]
+        regex: '(.*):_:.*:_:.*'
+        target_label: __address__
+      - source_labels: [__address__]
+        target_label: ext 
+      - source_labels: [__address__]
+        regex: '([^:]+)(?::.*|$)'
+        target_label: instance
+
+  - job_name: 'gpu_exporter'
+    scrape_interval: 15s
+    file_sd_configs:
+      - files:
+        - gpu_*.yaml
+    relabel_configs:
+      - source_labels: [__address__]
+        regex: '(.*):9835'
+        replacement: '${1}'
+        target_label: node
+
+  - job_name: 'dcgm_exporter'
+    file_sd_configs:    
+      - files:      
+        - dcgm_*.yaml
+    relabel_configs:
+      - source_labels: [__address__]
+        regex: '(.*):9400'
+        replacement: '${1}'
+        target_label: instance
+  - job_name: 'snmp_exporter-public'
+    scrape_interval: 30s
+    scrape_timeout: 30s
+    file_sd_configs:
+      - files:
+        - snmp_*.yml
+    metrics_path: /snmp
+    params:
+      module: [if_mib]
+    relabel_configs:
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 10.27.3.68:9116
+      - source_labels: [auth]
+        target_label: __param_auth
+  - job_name: 'snmp_exporter_lldp'
+    scrape_interval: 300s
+    scrape_timeout: 120s
+    file_sd_configs:
+      - files:
+        - snmp_*.yml
+    metrics_path: /snmp
+    params:
+      module: [lldp_info]
+    relabel_configs:
+      - source_labels: [auth]
+        target_label: __param_auth
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 10.27.3.68:9116
+
+  - job_name: ipmi_exporter
+    scrape_interval: 1m    
+    scrape_timeout: 30s                       
+    metrics_path: /ipmi                     
+    scheme: http                       
+    file_sd_configs:                
+    - files:                        
+      - ipmi_*.yml          
+    relabel_configs:    
+    - source_labels: [__address__]    
+      separator: ;                                  
+      target_label: __param_target                 
+      replacement: ${1}                                  
+      action: replace                       
+    - source_labels: [__param_target]                     
+      separator: ;                                     
+      target_label: instance                 
+      replacement: ${1}                            
+      action: replace                       
+    - separator: ;                     
+      target_label: __address__               
+      replacement: 10.27.3.68:9290                               
+      action: replace
+    - source_labels: [module]
+      target_label: __param_module      
+      action: replace             
+  - job_name: 'smokeping'
+    scrape_interval: 30s
+    scrape_timeout: 30s
+    file_sd_configs:
+      - files:
+        - smokeping_*.yaml
+    relabel_configs:
+      - source_labels: [__address__]
+        regex: '([^:]+)(:\d+)?'
+        replacement: '${1}'
+        target_label: instance
+      - source_labels: [__address__]
+        regex: '([^:]+)(:\d+)?'
+        replacement: '${1}'
+        target_label: probe_node
+      - target_label: instance_type
+        replacement: exporter
+  - job_name: 'snmp_exporter-ruijie'
+    scrape_interval: 30s
+    file_sd_configs:
+      - files:
+        - snmp_*.yml
+    metrics_path: /snmp
+    params:
+      module: [ruijie]
+    relabel_configs:
+      - target_label: auth
+        replacement: public_v2
+      - source_labels: [auth]
+        target_label: __param_auth
+      - source_labels: [__address__]
+        target_label: __param_target
+      - source_labels: [__param_target]
+        target_label: instance
+      - target_label: __address__
+        replacement: 10.27.3.68:9116
+    metric_relabel_configs:
+      - source_labels: [ruijieIfIndex]
+        target_label: ifIndex

@@ -1,0 +1,1224 @@
+- targets:
+  - 10.1.2.65
+  labels:
+    host_name: "CTYUN-H100-001"
+    ipmi_target: "10.1.2.65"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.66
+  labels:
+    host_name: "CTYUN-H100-002"
+    ipmi_target: "10.1.2.66"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.67
+  labels:
+    host_name: "CTYUN-H100-003"
+    ipmi_target: "10.1.2.67"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.68
+  labels:
+    host_name: "CTYUN-H100-004"
+    ipmi_target: "10.1.2.68"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.69
+  labels:
+    host_name: "CTYUN-H100-005"
+    ipmi_target: "10.1.2.69"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.70
+  labels:
+    host_name: "CTYUN-H100-006"
+    ipmi_target: "10.1.2.70"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.71
+  labels:
+    host_name: "CTYUN-H100-007"
+    ipmi_target: "10.1.2.71"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.72
+  labels:
+    host_name: "CTYUN-H100-008"
+    ipmi_target: "10.1.2.72"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.73
+  labels:
+    host_name: "CTYUN-H100-009"
+    ipmi_target: "10.1.2.73"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.74
+  labels:
+    host_name: "CTYUN-H100-010"
+    ipmi_target: "10.1.2.74"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.75
+  labels:
+    host_name: "CTYUN-H100-011"
+    ipmi_target: "10.1.2.75"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.76
+  labels:
+    host_name: "CTYUN-H100-012"
+    ipmi_target: "10.1.2.76"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.77
+  labels:
+    host_name: "CTYUN-H100-013"
+    ipmi_target: "10.1.2.77"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.78
+  labels:
+    host_name: "CTYUN-H100-014"
+    ipmi_target: "10.1.2.78"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.79
+  labels:
+    host_name: "CTYUN-H100-015"
+    ipmi_target: "10.1.2.79"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.80
+  labels:
+    host_name: "CTYUN-H100-016"
+    ipmi_target: "10.1.2.80"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.81
+  labels:
+    host_name: "CTYUN-H100-017"
+    ipmi_target: "10.1.2.81"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.82
+  labels:
+    host_name: "CTYUN-H100-018"
+    ipmi_target: "10.1.2.82"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.83
+  labels:
+    host_name: "CTYUN-H100-019"
+    ipmi_target: "10.1.2.83"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.84
+  labels:
+    host_name: "CTYUN-H100-020"
+    ipmi_target: "10.1.2.84"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.85
+  labels:
+    host_name: "CTYUN-H100-021"
+    ipmi_target: "10.1.2.85"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.86
+  labels:
+    host_name: "CTYUN-H100-022"
+    ipmi_target: "10.1.2.86"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.87
+  labels:
+    host_name: "CTYUN-H100-023"
+    ipmi_target: "10.1.2.87"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.88
+  labels:
+    host_name: "CTYUN-H100-024"
+    ipmi_target: "10.1.2.88"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.89
+  labels:
+    host_name: "CTYUN-H100-025"
+    ipmi_target: "10.1.2.89"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.90
+  labels:
+    host_name: "CTYUN-H100-026"
+    ipmi_target: "10.1.2.90"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.91
+  labels:
+    host_name: "CTYUN-H100-027"
+    ipmi_target: "10.1.2.91"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.92
+  labels:
+    host_name: "CTYUN-H100-028"
+    ipmi_target: "10.1.2.92"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.93
+  labels:
+    host_name: "CTYUN-H100-029"
+    ipmi_target: "10.1.2.93"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.94
+  labels:
+    host_name: "CTYUN-H100-030"
+    ipmi_target: "10.1.2.94"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.95
+  labels:
+    host_name: "CTYUN-H100-031"
+    ipmi_target: "10.1.2.95"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.96
+  labels:
+    host_name: "CTYUN-H100-032"
+    ipmi_target: "10.1.2.96"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.97
+  labels:
+    host_name: "CTYUN-H100-033"
+    ipmi_target: "10.1.2.97"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.98
+  labels:
+    host_name: "CTYUN-H100-034"
+    ipmi_target: "10.1.2.98"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.99
+  labels:
+    host_name: "CTYUN-H100-035"
+    ipmi_target: "10.1.2.99"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.100
+  labels:
+    host_name: "CTYUN-H100-036"
+    ipmi_target: "10.1.2.100"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.101
+  labels:
+    host_name: "CTYUN-H100-037"
+    ipmi_target: "10.1.2.101"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.102
+  labels:
+    host_name: "CTYUN-H100-038"
+    ipmi_target: "10.1.2.102"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.103
+  labels:
+    host_name: "CTYUN-H100-039"
+    ipmi_target: "10.1.2.103"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.104
+  labels:
+    host_name: "CTYUN-H100-040"
+    ipmi_target: "10.1.2.104"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.105
+  labels:
+    host_name: "CTYUN-H100-041"
+    ipmi_target: "10.1.2.105"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.106
+  labels:
+    host_name: "CTYUN-H100-042"
+    ipmi_target: "10.1.2.106"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.107
+  labels:
+    host_name: "CTYUN-H100-043"
+    ipmi_target: "10.1.2.107"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.129
+  labels:
+    host_name: "CTYUN-H100-044"
+    ipmi_target: "10.1.2.129"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.130
+  labels:
+    host_name: "CTYUN-H100-045"
+    ipmi_target: "10.1.2.130"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.131
+  labels:
+    host_name: "CTYUN-H100-046"
+    ipmi_target: "10.1.2.131"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.132
+  labels:
+    host_name: "CTYUN-H100-047"
+    ipmi_target: "10.1.2.132"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.133
+  labels:
+    host_name: "CTYUN-H100-048"
+    ipmi_target: "10.1.2.133"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.134
+  labels:
+    host_name: "CTYUN-H100-049"
+    ipmi_target: "10.1.2.134"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.135
+  labels:
+    host_name: "CTYUN-H100-050"
+    ipmi_target: "10.1.2.135"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.136
+  labels:
+    host_name: "CTYUN-H100-051"
+    ipmi_target: "10.1.2.136"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.137
+  labels:
+    host_name: "CTYUN-H100-052"
+    ipmi_target: "10.1.2.137"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.138
+  labels:
+    host_name: "CTYUN-H100-053"
+    ipmi_target: "10.1.2.138"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.139
+  labels:
+    host_name: "CTYUN-H100-054"
+    ipmi_target: "10.1.2.139"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.140
+  labels:
+    host_name: "CTYUN-H100-055"
+    ipmi_target: "10.1.2.140"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.141
+  labels:
+    host_name: "CTYUN-H100-056"
+    ipmi_target: "10.1.2.141"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.142
+  labels:
+    host_name: "CTYUN-H100-057"
+    ipmi_target: "10.1.2.142"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.143
+  labels:
+    host_name: "CTYUN-H100-058"
+    ipmi_target: "10.1.2.143"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.144
+  labels:
+    host_name: "CTYUN-H100-059"
+    ipmi_target: "10.1.2.144"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.145
+  labels:
+    host_name: "CTYUN-H100-060"
+    ipmi_target: "10.1.2.145"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.146
+  labels:
+    host_name: "CTYUN-H100-061"
+    ipmi_target: "10.1.2.146"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.147
+  labels:
+    host_name: "CTYUN-H100-062"
+    ipmi_target: "10.1.2.147"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.148
+  labels:
+    host_name: "CTYUN-H100-063"
+    ipmi_target: "10.1.2.148"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.149
+  labels:
+    host_name: "CTYUN-H100-064"
+    ipmi_target: "10.1.2.149"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.150
+  labels:
+    host_name: "CTYUN-H100-065"
+    ipmi_target: "10.1.2.150"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.151
+  labels:
+    host_name: "CTYUN-H100-066"
+    ipmi_target: "10.1.2.151"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.152
+  labels:
+    host_name: "CTYUN-H100-067"
+    ipmi_target: "10.1.2.152"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.153
+  labels:
+    host_name: "CTYUN-H100-068"
+    ipmi_target: "10.1.2.153"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.154
+  labels:
+    host_name: "CTYUN-H100-069"
+    ipmi_target: "10.1.2.154"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.155
+  labels:
+    host_name: "CTYUN-H100-070"
+    ipmi_target: "10.1.2.155"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.156
+  labels:
+    host_name: "CTYUN-H100-071"
+    ipmi_target: "10.1.2.156"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.157
+  labels:
+    host_name: "CTYUN-H100-072"
+    ipmi_target: "10.1.2.157"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.158
+  labels:
+    host_name: "CTYUN-H100-073"
+    ipmi_target: "10.1.2.158"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.159
+  labels:
+    host_name: "CTYUN-H100-074"
+    ipmi_target: "10.1.2.159"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.160
+  labels:
+    host_name: "CTYUN-H100-075"
+    ipmi_target: "10.1.2.160"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.161
+  labels:
+    host_name: "CTYUN-H100-076"
+    ipmi_target: "10.1.2.161"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.162
+  labels:
+    host_name: "CTYUN-H100-077"
+    ipmi_target: "10.1.2.162"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.163
+  labels:
+    host_name: "CTYUN-H100-078"
+    ipmi_target: "10.1.2.163"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.164
+  labels:
+    host_name: "CTYUN-H100-079"
+    ipmi_target: "10.1.2.164"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.165
+  labels:
+    host_name: "CTYUN-H100-080"
+    ipmi_target: "10.1.2.165"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.166
+  labels:
+    host_name: "CTYUN-H100-081"
+    ipmi_target: "10.1.2.166"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.167
+  labels:
+    host_name: "CTYUN-H100-082"
+    ipmi_target: "10.1.2.167"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.168
+  labels:
+    host_name: "CTYUN-H100-083"
+    ipmi_target: "10.1.2.168"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.169
+  labels:
+    host_name: "CTYUN-H100-084"
+    ipmi_target: "10.1.2.169"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.170
+  labels:
+    host_name: "CTYUN-H100-085"
+    ipmi_target: "10.1.2.170"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.171
+  labels:
+    host_name: "CTYUN-H100-086"
+    ipmi_target: "10.1.2.171"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.193
+  labels:
+    host_name: "CTYUN-H100-087"
+    ipmi_target: "10.1.2.193"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.194
+  labels:
+    host_name: "CTYUN-H100-088"
+    ipmi_target: "10.1.2.194"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.195
+  labels:
+    host_name: "CTYUN-H100-089"
+    ipmi_target: "10.1.2.195"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.196
+  labels:
+    host_name: "CTYUN-H100-090"
+    ipmi_target: "10.1.2.196"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.197
+  labels:
+    host_name: "CTYUN-H100-091"
+    ipmi_target: "10.1.2.197"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.198
+  labels:
+    host_name: "CTYUN-H100-092"
+    ipmi_target: "10.1.2.198"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.199
+  labels:
+    host_name: "CTYUN-H100-093"
+    ipmi_target: "10.1.2.199"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.200
+  labels:
+    host_name: "CTYUN-H100-094"
+    ipmi_target: "10.1.2.200"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.201
+  labels:
+    host_name: "CTYUN-H100-095"
+    ipmi_target: "10.1.2.201"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.202
+  labels:
+    host_name: "CTYUN-H100-096"
+    ipmi_target: "10.1.2.202"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.203
+  labels:
+    host_name: "CTYUN-H100-097"
+    ipmi_target: "10.1.2.203"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.204
+  labels:
+    host_name: "CTYUN-H100-098"
+    ipmi_target: "10.1.2.204"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.205
+  labels:
+    host_name: "CTYUN-H100-099"
+    ipmi_target: "10.1.2.205"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.206
+  labels:
+    host_name: "CTYUN-H100-100"
+    ipmi_target: "10.1.2.206"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.207
+  labels:
+    host_name: "CTYUN-H100-101"
+    ipmi_target: "10.1.2.207"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.208
+  labels:
+    host_name: "CTYUN-H100-102"
+    ipmi_target: "10.1.2.208"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.209
+  labels:
+    host_name: "CTYUN-H100-103"
+    ipmi_target: "10.1.2.209"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.210
+  labels:
+    host_name: "CTYUN-H100-104"
+    ipmi_target: "10.1.2.210"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.211
+  labels:
+    host_name: "CTYUN-H100-105"
+    ipmi_target: "10.1.2.211"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.212
+  labels:
+    host_name: "CTYUN-H100-106"
+    ipmi_target: "10.1.2.212"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.213
+  labels:
+    host_name: "CTYUN-H100-107"
+    ipmi_target: "10.1.2.213"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.214
+  labels:
+    host_name: "CTYUN-H100-108"
+    ipmi_target: "10.1.2.214"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.215
+  labels:
+    host_name: "CTYUN-H100-109"
+    ipmi_target: "10.1.2.215"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.216
+  labels:
+    host_name: "CTYUN-H100-110"
+    ipmi_target: "10.1.2.216"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.217
+  labels:
+    host_name: "CTYUN-H100-111"
+    ipmi_target: "10.1.2.217"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.218
+  labels:
+    host_name: "CTYUN-H100-112"
+    ipmi_target: "10.1.2.218"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.219
+  labels:
+    host_name: "CTYUN-H100-113"
+    ipmi_target: "10.1.2.219"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.220
+  labels:
+    host_name: "CTYUN-H100-114"
+    ipmi_target: "10.1.2.220"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.221
+  labels:
+    host_name: "CTYUN-H100-115"
+    ipmi_target: "10.1.2.221"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.222
+  labels:
+    host_name: "CTYUN-H100-116"
+    ipmi_target: "10.1.2.222"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.223
+  labels:
+    host_name: "CTYUN-H100-117"
+    ipmi_target: "10.1.2.223"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.224
+  labels:
+    host_name: "CTYUN-H100-118"
+    ipmi_target: "10.1.2.224"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.225
+  labels:
+    host_name: "CTYUN-H100-119"
+    ipmi_target: "10.1.2.225"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.226
+  labels:
+    host_name: "CTYUN-H100-120"
+    ipmi_target: "10.1.2.226"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.227
+  labels:
+    host_name: "CTYUN-H100-121"
+    ipmi_target: "10.1.2.227"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.228
+  labels:
+    host_name: "CTYUN-H100-122"
+    ipmi_target: "10.1.2.228"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.229
+  labels:
+    host_name: "CTYUN-H100-123"
+    ipmi_target: "10.1.2.229"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.230
+  labels:
+    host_name: "CTYUN-H100-124"
+    ipmi_target: "10.1.2.230"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.231
+  labels:
+    host_name: "CTYUN-H100-125"
+    ipmi_target: "10.1.2.231"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.232
+  labels:
+    host_name: "CTYUN-H100-126"
+    ipmi_target: "10.1.2.232"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.233
+  labels:
+    host_name: "CTYUN-H100-127"
+    ipmi_target: "10.1.2.233"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.2.234
+  labels:
+    host_name: "CTYUN-H100-128"
+    ipmi_target: "10.1.2.234"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.101
+  labels:
+    host_name: "CTYUN-CPU-01"
+    ipmi_target: "10.1.3.101"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.102
+  labels:
+    host_name: "CTYUN-CPU-02"
+    ipmi_target: "10.1.3.102"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.103
+  labels:
+    host_name: "CTYUN-CPU-03"
+    ipmi_target: "10.1.3.103"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.104
+  labels:
+    host_name: "CTYUN-CPU-04"
+    ipmi_target: "10.1.3.104"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.105
+  labels:
+    host_name: "CTYUN-CPU-05"
+    ipmi_target: "10.1.3.105"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.106
+  labels:
+    host_name: "CTYUN-CPU-06"
+    ipmi_target: "10.1.3.106"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.107
+  labels:
+    host_name: "CTYUN-CPU-07"
+    ipmi_target: "10.1.3.107"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"
+- targets:
+  - 10.1.3.108
+  labels:
+    host_name: "CTYUN-CPU-08"
+    ipmi_target: "10.1.3.108"
+    data_center_id: "59baf96d-21a3-4b94-af9b-aab0a88f6bec"
+    module: "default"
+    job: "ipmi_exporter"
+    project: "ali"

@@ -1,0 +1,7 @@
+- targets:
+  - 10.27.3.69:9374
+  labels:
+    app: smokeping-prober
+    job: smokeping-icmp-ali
+    probe_group: ali
+    data_center_id: 59baf96d-21a3-4b94-af9b-aab0a88f6bec
