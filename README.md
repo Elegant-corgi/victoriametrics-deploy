@@ -104,7 +104,35 @@ cp nodes.conf.example nodes.conf
 ./deploy_vm_single_node.sh /data/local/vm ./victoria-metrics.tar.gz
 ```
 
-单机脚本会创建部署目录、复制 `cfg/` 配置、生成 systemd 服务并尝试启动相关组件。
+单机脚本会创建部署目录、复制 `cfg/` 配置、生成 systemd 服务并尝试启动相关组件。单机 tar 包必须包含以下二进制：
+
+- `vmstorage-prod`
+- `vminsert-prod`
+- `vmselect-prod`
+- `vmagent-prod`
+- `vmalert-prod`
+- `vmauth-prod`
+
+单机部署默认启用 `vmauth`：
+
+- 鉴权入口：`http://<server-ip>:8427`
+- 写入账号：`vm_single_write`
+- 查询账号：`vm_single_query`
+- 凭据文件：`/data/local/vm/cfg/secrets/single.env`
+
+客户写入示例：
+
+```bash
+curl -u 'vm_single_write:<password>' --data-binary 'demo_metric 1' \
+  http://<server-ip>:8427/api/v1/import/prometheus
+```
+
+查询示例：
+
+```bash
+curl -u 'vm_single_query:<password>' \
+  'http://<server-ip>:8427/api/v1/query?query=up'
+```
 
 ## 配置更新
 
